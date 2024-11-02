@@ -12,3 +12,4 @@ class TestLogin(Login):
         assert self.driver.title == self.title
         assert self.driver.find_element(By.CSS_SELECTOR,
                                         '#login > p:nth-child(1) > a:nth-child(1)').text == self.logout_button
+

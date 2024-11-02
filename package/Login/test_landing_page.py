@@ -27,3 +27,5 @@ class TestLandingPage(Login):
     #     self.driver.find_element(By.CSS_SELECTOR, '#Email').send_keys('<EMAIL>')
     #     self.driver.find_element(By.CSS_SELECTOR, '#Password').send_keys('<PASSWORD>')
     #     self.driver.find_element(By.CSS_SELECTOR, '#div.form-group:nth-child(8) > div:nth-child(1) > a:nth-child(1)').click()
+
+    #test

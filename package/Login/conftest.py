@@ -8,7 +8,10 @@ import pytest
 
 @pytest.fixture(autouse=True, scope='class')
 def setup(request):
+    #normal browser
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+
+    #headless chrome
 
     request.cls.driver = driver
 

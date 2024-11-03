@@ -12,13 +12,19 @@ class TestLandingPage(Login):
         print(landing_page_test)
         assert landing_page_test == 'Sign In'
 
+
     def test_version(self):
-        self.driver.find_element(By.CSS_SELECTOR, '#SignInNavbarLargeSearch > a:nth-child(1) > span:nth-child(1)').click()
+        self.driver.find_element(By.CSS_SELECTOR, '#SignInNavbarLargeSearch > a').click()
+        time.sleep(2)
+        self.driver.find_element(By.CSS_SELECTOR, 'div.col-md-6:nth-child(5) > div:nth-child(2) > button:nth-child(2)').click()
         time.sleep(2)
         self.driver.find_element(By.CSS_SELECTOR, 'button.pull-left').click()
-        search_text_result = self.driver.find_element(By.CSS_SELECTOR, 'td.text-center:nth-child(1) > span:nth-child(1)').text
+        time.sleep(2)
+        self.driver.find_element(By.CSS_SELECTOR, 'div.col-md-4:nth-child(1) > div:nth-child(1) > a:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > p:nth-child(1)').click()
+        time.sleep(2)
+        search_text_result = self.driver.find_element(By.CSS_SELECTOR, '.rdbHole > a:nth-child(2)').text
         print(search_text_result)
-        assert search_text_result == 'Saturday'
+        assert search_text_result == '18 Holes'
 
     # def test_login_admin(self):
     #     self.test_url()
@@ -29,3 +35,4 @@ class TestLandingPage(Login):
     #     self.driver.find_element(By.CSS_SELECTOR, '#div.form-group:nth-child(8) > div:nth-child(1) > a:nth-child(1)').click()
 
     #test
+
